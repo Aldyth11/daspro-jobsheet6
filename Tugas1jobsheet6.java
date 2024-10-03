@@ -5,7 +5,7 @@ public class Tugas1jobsheet6 {
         Scanner input14 = new Scanner(System.in);
         int jmlBuku;
         String jenisBuku;
-        double diskon = 0, harga = 20000, totalDiskon, totalHarga; 
+        double diskon = 0, harga = 20000, sblmDiskon, totalDiskon, totalHarga; 
 
         System.out.println("Masukkan jenis buku: ");
         jenisBuku = input14.nextLine();
@@ -27,8 +27,10 @@ public class Tugas1jobsheet6 {
         else  if (jmlBuku > 3) {
             diskon = 0.05;
         }
-        totalDiskon = diskon * (jmlBuku * harga);
-        totalHarga = harga - totalDiskon;
+        sblmDiskon = (jmlBuku * harga);
+        totalDiskon = diskon * sblmDiskon;
+        totalHarga = sblmDiskon - totalDiskon;
+    
     System.out.println("Total diskon: " + totalDiskon);
     System.out.println("Total harga: " + totalHarga);
 }
